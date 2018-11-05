@@ -1,0 +1,173 @@
+/* TAGS */
+html {
+    font-family: Verdana, sans-serif;
+    font-size: 10px;
+}
+html, body {
+    height: 100%;
+}
+
+/* CLASSES */
+.wrapper {
+    display: grid;
+    grid-template-columns: 1066px;
+    grid-template-rows: auto 1fr auto;
+    grid-row-gap: 45px;
+    justify-content: center;
+    min-height: 100%;
+    padding: 45px 150px 20px 150px;
+    background: url("../images/background_image.png") center no-repeat;
+    background-size: cover;
+}
+
+/* HEADER */
+.header {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo__img {
+    display: inline-block;
+    height: 44px;
+    width: 46px;
+    background: url(../images/logo.png) center no-repeat;
+    background-size: cover;
+    transition: 0.3s ease-in;
+}
+.logo__name {
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    width: 110px;
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 21px;
+    text-transform: uppercase;
+    transition: 0.3s ease-in;
+}
+.logo__name span {
+    display: inline-block;
+    font-size: 2.9rem;
+}
+
+.logo:hover .logo__img {
+    background: url(../images/logo-hover.png) center no-repeat;
+    transition: 0.3s ease-out;
+}
+.logo:hover .logo__name {
+    color: #f26522;
+    transition: 0.3s ease-out;
+}
+
+/* Contacts */
+.contacts {
+    text-align: right;
+    color: #ffffff;
+    font-size: 1.8rem;
+    line-height: 21px;
+}
+.contacts p {
+    margin-top: 3px;
+}
+
+/* TOURS */
+.tours {
+    display: grid;
+    grid-template-columns: 312px 312px 312px;
+    grid-template-rows: repeat(auto-fill, 254px);
+    grid-row-gap: 65px;
+    justify-content: space-between;  
+    align-content: start;  
+}
+
+/* Tour card */
+.tour_card {
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Tour photo */
+.tour_card__photo_wrapper {
+    position: relative;
+    height: 204px;
+    background-color: #ffffff;    
+    background: linear-gradient(180deg, #ffffff 5%, #000000 95%);
+    box-shadow: 0px 17px 24px 0px #000000;
+    overflow: hidden;
+}
+.tour_card__photo {
+    height: 200px;
+    margin: 2px 0;
+}
+
+/* Tour details */
+.tour_card__details {
+    position: absolute;
+    top: 204px;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-content: end;
+    height: 63px;
+    width: 100%;
+    padding: 0 40px 17px 20px;
+    color: #ffffff;
+    transition: 0.3s ease-out;
+}
+.tour_price {
+    position: relative;
+    font-size: 2rem;
+    line-height: 21px;
+}
+.tour_price::before {
+    content: "from";
+    position: absolute;
+    font-size: 1rem;
+    top: -18px;
+}
+.view_details {
+    position: relative;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+.view_details::after {
+    content: url(../images/view_details_arrow.png);
+    position: absolute;
+    height: 10px;
+    width: 7px;
+    right: -22px;
+}
+
+.tour_card__name {
+    margin-top: 19px;
+    font-size: 1.8rem;
+    line-height: 21px;
+    text-transform: capitalize;
+    transition: 0.3s ease-out;
+}
+
+.tour_card:hover .tour_card__name {
+    color: #f26522;
+    transition: 0.3s ease-out;
+}
+.tour_card:hover .tour_card__details {
+    top: 141px;
+    background-color: #f26522;
+    transition: 0.3s ease-out;
+}
+
+/* FOOTER */
+.copy {    
+    color: #ffffff;
+    font-size: 1.2rem;
+    line-height: 21px;
+    text-transform: capitalize;
+    text-align: center;
+}
+.copy span {
+    text-transform: none;
+}
